@@ -129,10 +129,14 @@ What would you like to do?
 
 10. **Release management** — Release dates, status, team breakdown, freeze announcements, blocker bugs, CVEs, release notes
 
+### Orchestrator Validation Tasks
+
+11. **Orchestrator release testing** — Validate full-stack orchestrator release readiness, dependency deltas, and OSL pre-release paths with go/no-go output
+
 ### General Tasks
 
-11. **Check environment** — Run doctor, configure paths
-12. **View/search activity** — Review worklog, todos
+12. **Check environment** — Run doctor, configure paths
+13. **View/search activity** — Review worklog, todos
 
 **Wait for response before proceeding.**
 </intake>
@@ -194,12 +198,20 @@ What would you like to do?
 
 **To route:** Read `../rhdh-release/SKILL.md` and follow its intake process.
 
+### Orchestrator Validation Routes
+
+| Response | Skill |
+|----------|-------|
+| 11, "orchestrator release testing", "validate orchestrator setup", "go/no-go", "dependency delta", "new release versions", "prepare-internal-osl", "OSL pre-release" | Route to `@rhdh-orchestrator-release-testing` skill |
+
+**To route:** Read `../rhdh-orchestrator-release-testing/SKILL.md` and follow its routing rules.
+
 ### General Routes
 
 | Response | Action |
 |----------|--------|
-| 11, "doctor", "setup", "config" | Use CLI commands below |
-| 12, "log", "todo", "activity" | Use tracking commands below |
+| 12, "doctor", "setup", "config" | Use CLI commands below |
+| 13, "log", "todo", "activity" | Use tracking commands below |
 
 </routing>
 
@@ -340,6 +352,7 @@ Todos must be **self-contained**—a new session should understand the task with
 | rhdh-pr-review | PR code review and live cluster testing | `../rhdh-pr-review/SKILL.md` |
 | rhdh-test-plan-review | Reviews an RHDH test plan Jira ticket and suggests platform/integration version updates | `../rhdh-test-plan-review/SKILL.md` |
 | rhdh-release | Release dates, status tracking, team coordination, freeze announcements, blocker bugs, CVEs, release notes | `../rhdh-release/SKILL.md` |
+| rhdh-orchestrator-release-testing | Full-stack orchestrator release readiness validation with go/no-go output | `../rhdh-orchestrator-release-testing/SKILL.md` |
 
 ### Shared References
 
